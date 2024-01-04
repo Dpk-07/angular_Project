@@ -1,0 +1,12 @@
+<div class="col">
+    <div class="card" style="min-height:510px;">
+      <img [src]="product.thumbnail"  class="card-img-top h-250" style="height: 250px;" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">Price : {{product.price}}</p>
+        <p class="card-text">{{product.description}}</p>
+        <p class="card-text">Discounted price : {{product.price-(product.price*product.discountPercentage/100)}}</p>
+        <p class="card-text" [ngStyle]="{fontWeight:'bold', color: product.stock ? 'green':'red'}">{{product.stock ? "Available in Stocks":"Not Available in Stocks"}}</p>
+      </div>
+    </div>
+  </div>
