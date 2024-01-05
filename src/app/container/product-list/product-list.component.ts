@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'product-list',
@@ -28,8 +28,8 @@ products = [
     ]
   },
   {
-    id: 1,
-    title: "iPhone 9",
+    id: 2,
+    title: "Samsung",
     description: "An apple mobile which is nothing like apple",
     price: 549,
     discountPercentage: 12.96,
@@ -48,8 +48,8 @@ products = [
     ]
   },
   {
-    id: 1,
-    title: "iPhone 9",
+    id: 3,
+    title: "Nokia",
     description: "An apple mobile which is nothing like apple",
     price: 549,
     discountPercentage: 12.96,
@@ -68,7 +68,7 @@ products = [
     ]
   }
   ,{
-    id: 1,
+    id: 4,
     title: "iPhone 9",
     description: "An apple mobile which is nothing like apple",
     price: 549,
@@ -94,9 +94,11 @@ totalInStock = this.products.filter(p=>p.stock > 0).length;
 totalOutStock = this.products.filter(p=>p.stock == 0).length;
 
 FilterValue:string = 'all';
+@Input()
+searchTextRe:string = '';
 
 onFilterChanged(value:string){
-  // console.log('paraent',value);
+  // console.log('paraent',this.searchTextRe);
   this.FilterValue = value;
 }
 

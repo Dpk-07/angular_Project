@@ -1,7 +1,7 @@
     <div class="container-fluid navbar bg-body-tertiary justify-content-center">
       <form class="d-flex" role="search">
-        <input [(ngModel)]="searchText" name="searchField" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button [ngClass]="{'btn':true, 'btn-success':searchText,'btn-secondary':!searchText}" [disabled]="!searchText" type="submit">Search</button>
+        <input  #inputTextSearch name="searchField" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success" (click)="onClickSearch()" type="submit">Search</button>
       </form>
     </div>
 

@@ -1,8 +1,8 @@
 <app-filter [all]="totalProduct" [inStock]="totalInStock" [outOfStock]="totalOutStock" 
 (selectedFilterRadioButtonChanged)="onFilterChanged($event)"></app-filter>
 <div class="row row-cols-1 row-cols-md-4 g-4">
-
-<div *ngFor="let item of products" >
-    <app-product [product]="item" *ngIf="FilterValue == 'all' || FilterValue == item.inStock.toString()"></app-product>
+<div *ngFor="let item of products" (click)="selectedProduct = item">
+  <!-- *ngIf="FilterValue == 'all' || FilterValue == item.inStock.toString()" for soritng -->
+    <app-product [product]="item" *ngIf="searchTextRe == '' || item.title.toLowerCase().includes(searchTextRe)"></app-product>
 </div>
   </div>

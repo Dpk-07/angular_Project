@@ -13,6 +13,8 @@ import { SearchComponent } from './container/search/search.component';
 import { ProductListComponent } from './container/product-list/product-list.component';
 import { ProductComponent } from './container/product-list/product/product.component';
 import { FilterComponent } from './container/product-list/filter/filter.component';
+import { ProductDetailComponent } from './container/product-detail/product-detail.component';
+import {HttpClientModule} from '@angular/common/http'
 // import { ProductListComponent } from './container/product-list/product-list.component';
 
 @NgModule({
@@ -28,11 +30,13 @@ import { FilterComponent } from './container/product-list/filter/filter.componen
     ProductListComponent,
     ProductComponent,
     FilterComponent,
+    ProductDetailComponent,
     // ProductListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
