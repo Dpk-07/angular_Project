@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input } from '@angular/core';
+import { Product } from 'src/app/models/Product';
 
 @Component({
   selector: 'product-list',
@@ -101,5 +102,7 @@ onFilterChanged(value:string){
   // console.log('paraent',this.searchTextRe);
   this.FilterValue = value;
 }
+
+selectedProduct:Product;
 
 }

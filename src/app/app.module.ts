@@ -15,6 +15,7 @@ import { ProductComponent } from './container/product-list/product/product.compo
 import { FilterComponent } from './container/product-list/filter/filter.component';
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 import {HttpClientModule} from '@angular/common/http'
+import { SetBackground } from './customDirective/setBackground.directive';
 // import { ProductListComponent } from './container/product-list/product-list.component';
 
 @NgModule({
@@ -32,6 +33,7 @@ import {HttpClientModule} from '@angular/common/http'
     FilterComponent,
     ProductDetailComponent,
     // ProductListComponent
+    SetBackground
   ],
   imports: [
     BrowserModule,
